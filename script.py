@@ -35,6 +35,7 @@ def cancelar_take_profit(symbol, orderid):
         category="linear",
         symbol=symbol,
         orderId=orderid,
+        reduceOnly=True,
     )
 
     return order
