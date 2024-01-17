@@ -35,7 +35,6 @@ def cancelar_take_profit(symbol, orderid):
         category="linear",
         symbol=symbol,
         orderId=orderid,
-        reduceOnly=True,
     )
 
     return order
@@ -57,6 +56,7 @@ def establecer_take_profit(symbol, price, side, qty):
         orderType="Limit",
         qty=qty,
         price=price,
+        reduceOnly=True,
     )
 
     order_id = order['result']['orderId']
